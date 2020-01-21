@@ -1,0 +1,126 @@
+
+/** container样式**/
+.node-container, .node-groups-container{
+  min-height: 30px;
+  border: solid 1px transparent;
+  border-radius: 4px;
+}
+.node-groups-container{
+  min-height: 50px;
+  overflow: auto;
+}
+.node-groups-container{
+  border: solid 1px #ebeef5;
+  
+  >.node-container{
+    display: block;
+    margin-bottom: 15px;
+    >.node-groups-container{
+      // border: solid 1px #409EFF;
+    } 
+  } 
+  .el-form{
+    margin-top: 15px;
+  }
+}
+.h-container{
+  >.node-container{
+    display: inline-block;
+    margin-right: 15px;
+    min-height: 30px;
+    vertical-align: top;
+  }
+  .node-groups-container{
+    min-width: 180px;
+  }
+}
+
+.panel-container{
+  overflow: auto;
+  >.node-container{
+    // border: solid 1px #409EFF;
+    margin: 15px;
+    padding: 10px 15px;
+  }
+  >.node-container:first-child{
+    margin-top: 0px;
+  }
+}
+
+.el-form-item__content{
+  >.node-container{
+    display: inline-block;
+  }
+}
+.el-form-item--mini.el-form-item, .el-form-item--small.el-form-item{
+  margin-bottom: 15px;
+}
+/**覆盖tab样式**/
+.el-tabs{
+  height: 100%;
+  .el-tabs__content{
+    height: calc(100% - 56px);
+    .el-tab-pane{
+      height: 100%;
+    }
+  }
+}
+/**图表样式**/
+.node-container .echarts{
+  min-width: 400px;
+}
+.h-container .echarts {
+  min-width: 400px;
+  height: 400px;
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width:6px;
+  height: 6px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  box-shadow:inset006pxrgba(0,0,0,0.3);
+  border-radius:4px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius:5px;
+  background:rgba(0,0,0,0.1);
+  box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background:rgba(0,0,0,0.1);
+}
+
+/**属性框样式**/
+.property-sheet-container{
+  .item-container{
+    margin: 10px 0;
+    border: solid 1px #f8f8f8;
+    .title{
+      padding: 10px 15px;
+      background: #f8f8f8;
+    } 
+  }
+  .el-button--mini{
+    padding: 4px !important;
+  }
+  .el-input__inner{
+    padding: 0 5px
+  }
+  .el-form-item--small .el-form-item__content{
+    // text-align: right;
+  }
+}
+
+/**树节点**/
+.el-tree-node__content{
+  height: 40px;
+  line-height: 40px;
+}
+
+/**导航菜单样式**/
+.el-menu--horizontal{
+  position: absolute;
+}
