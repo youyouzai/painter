@@ -2,6 +2,7 @@ import $ from 'jquery'
 import { createNode, deleteNode } from './node-factory'
 import manager from './node-manager'
 export default {
+  // eslint-disable-next-line
   editNode (node) {
     // eslint-disable-next-line
     // console.log(node)
@@ -85,12 +86,13 @@ export default {
     const type = Number(event.dataTransfer.getData('type'))
     const operateType = event.dataTransfer.getData('operateType')
     let node = null
+    let newNode = null
     switch (operateType) {
       case 'move':
         this.moveNode(event, node)
-        break
+      break
       case 'add':
-        const newNode = createNode(type)
+        newNode = createNode(type)
         if (type === 42) {
           // 弹出框
           const root = this.$store.state.property.rootNode

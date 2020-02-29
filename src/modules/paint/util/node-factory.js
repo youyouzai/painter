@@ -215,11 +215,11 @@ export function createNode(componentType, parent) {
       break
     case 41: // page
       const node1 = getEmptyNode(0)
-      node1.menuIndex = 'project'
+      node1.prop = node1.menuIndex = 'project'
       const node2 = getEmptyNode(0)
-      node2.menuIndex = 'library'
+      node2.prop = node2.menuIndex = 'library'
       const node3 = getEmptyNode(0)
-      node3.menuIndex = 'configuration'
+      node3.prop = node3.menuIndex = 'configuration'
       const menus = [
         { label: '无边海', index: 'sea', children: [{ label: '火阗真人', index: 'project', icon: 'el-icon-menu', nodeId: node1.id }] },
         { label: '万妖窟', index: 'library', icon: 'el-icon-s-grid', nodeId: node2.id },

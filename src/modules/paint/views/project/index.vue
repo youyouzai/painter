@@ -40,10 +40,6 @@ import tableDataDialog from './components/table-data-dialog'
 import chartConfigDialog from './components/chart-config-dialog/index'
 import container from '../../components/container.vue'
 import { createNode, deleteNode } from '../../util/node-factory'
-// import generator from '../../util/generator'
-
-// import FileUtil from '@/modules/code-generator/utils/file'
-// const fileUtil = new FileUtil()
 
 export default {
   components: { componentsSelector, container, propertySheet, columnConfigDialog, tableDataDialog, chartConfigDialog },
@@ -104,8 +100,20 @@ export default {
       event.preventDefault()
     },
     downloadFile() {
+      this.traverseNode(this.node)
+      // eslint-disable-next-line
+      console.log(JSON.stringify(this.node))
       // const path = generator(this.node)
-      // fileUtil.download(path)
+      this.$electron.ipcRenderer.send('download', this.node)
+    },
+    traverseNode(node) {
+      delete node.parent
+      node.children && node.children.forEach((child) => {
+        this.traverseNode(child)
+      })
+      node.node  && node.node.children.forEach((child) => {
+        this.traverseNode(child)
+      })
     }
   }
 }

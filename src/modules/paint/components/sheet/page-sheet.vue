@@ -113,7 +113,6 @@ export default {
       const suffix = `-${data.children.length + 1}`
       const label = data.label || 'newItem'
       const index = data.index || 'menu'
-
       const newChild = this.createMenuNode(`${label}${suffix}`, `${index}${suffix}`)
       data.children.push(newChild)
     },

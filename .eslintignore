@@ -2,5 +2,6 @@ test/unit/coverage/**
 test/unit/*.js
 test/e2e/*.js
 src/components/common/**
-src/modules/code-generator/**
+src/modules/project-generator/**
 src/modules/component-library/**
+node-modules/**

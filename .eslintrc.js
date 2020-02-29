@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "commonjs": true
     },
     "extends": [
         "eslint:recommended",
@@ -19,6 +20,7 @@ module.exports = {
         "vue"
     ],
     "rules": {
+        "no-console": "off",
         // allow paren-less arrow functions
         'arrow-parens': 0,
         'space-before-function-paren': 0,
