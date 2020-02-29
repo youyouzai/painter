@@ -7,19 +7,19 @@
           <container ref="container" :id="node.id" class="panel-container" :node="panelNode"></container>
           <container class="dialog-container" :node="dialogGroupNode"></container>
         </el-tab-pane>
-        <el-tab-pane label="源码" name="sourceCode">
+        <!-- <el-tab-pane label="源码" name="sourceCode">
           <div class="code">展示生成的json数据配置</div>
-        </el-tab-pane>
+        </el-tab-pane> -->
       </el-tabs>
       <el-button-group class="tool-container">
         <el-button
           type="primary"
           icon="el-icon-download"
           size="mini"
-          title="下载文件"
+          title="下载"
           @click="downloadFile"
         ></el-button>
-        <el-button type="primary" icon="el-icon-folder" size="mini" title="下载工程"></el-button>
+        <!-- <el-button type="primary" icon="el-icon-folder" size="mini" title="下载工程"></el-button> -->
       </el-button-group>
     </div>
     <property-sheet class="property-panel-container"></property-sheet>
@@ -149,7 +149,7 @@ export default {
     .tool-container {
       position: absolute;
       top: 5px;
-      left: 180px;
+      left: 80px;
     }
     .dialog-tool-container {
       position: absolute;

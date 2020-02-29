@@ -7,8 +7,7 @@
 <script>
   export default {
     name: 'electron-vue',
-    components: {
-    },
+    components: {},
     data () {
       return {}
     },

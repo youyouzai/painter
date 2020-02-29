@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="l-left">
+    <!-- <div class="l-left">
       <header class="header">
         <el-button type="primary" icon="el-icon-plus">新建项目</el-button>
       </header>
@@ -31,7 +31,7 @@
           </template>
         </el-menu>
       </section>
-    </div>
+    </div> -->
     <div class="l-main">
       <router-view />
     </div>
